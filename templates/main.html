@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gamma application</title>
+</head>
+<body>
+ <h1>Gamma prediction application</h1>   
+ <hr>
+ {% if result %}
+ <h1>your prediction is {{result}}</h1>
+ {% endif %}
+ <form action="" method="POST">
+ {% csrf_token %}
+    fLength: <input type="number" name="fLength" required>
+    fWidth: <input type="number" name="fWidth" required>
+    fSize: <input type="number" name="fSize" required>
+    fConc: <input type="number" name="fConc" required>
+    fConc1: <input type="number" name="fConc1" required>
+    fAsym: <input type="number" name="fAsym" required>
+    fM3Long: <input type="number" name="fM3Long" required>
+    fM3Trans: <input type="number" name="fM3Trans" required>
+    fAlpha: <input type="number" name="fAlpha" required>
+    fDist: <input type="number" name="fDist" required>
+    <input type="submit">
+ </form>
+</body>
+</html>
